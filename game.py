@@ -143,7 +143,6 @@ class Game:
         total_brick_width = -BRICK_PADDING + (BRICK_SIZE[0] + BRICK_PADDING) * BRICK_COUNT[0]
 
         side_pad = SCREEN_SIZE[0] - total_brick_width
-        print(total_brick_width)
         top_pad = PADDING[0] + BRICK_SIZE[1] * 2
 
         for i in range(0, BRICK_COUNT[1]):
@@ -282,14 +281,6 @@ class Game:
                 if event.type == pygame.QUIT:
                     self.clean()
                     done = True
-
-    def draw_help(self):
-        if self.state != STATE_BALL_IN_PADDLE:
-            return
-
-    def draw_rank(self):
-        if self.state != STATE_BALL_IN_PADDLE:
-            return
 
     def add_rank(self):
         if not self.rank_saved:
